@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function randomValueGenerator(array){
+                return array[Math.floor(Math.random()*array.length)];
+
+            }
+            var story="Hey there this is Ashish . Here you can see these two values changing on click of the button. The two arguents are :insertx: and :inserty: ";
+            var val1 = ["dogs","cats","humans"];
+            var val2 = ["sunny","rain","windy"];
+
+
+            function chk(){
+                let name = document.getElementById("val").value;
+               
+                // var charactersLength = val1.length;
+                // val1.charAt(Math.floor(Math.random() * charactersLength))
+                //  val2.charAt[Math.floor(Math.random()*items.length)];
+
+                var newStory = story;
+                var xItem = randomValueGenerator(val1);
+                var yItem = randomValueGenerator(val2);
+
+                var newStory = newStory.replace(':insertx:', xItem);
+                var newStory = newStory.replace(':inserty:', yItem);
+                if(name != ""){
+                    newStory = newStory.replace('Ashish', name)
+                }
+               
+                console.log(xItem);
+                console.log(yItem);
+
+
+                console.log(newStory);
+                document.getElementById("op").innerHTML=newStory ;
+
+                op.style.visibility= 'visible';
+            }
+            
+        </script>
+        <style>
+            #op{
+                background-color: cadetblue;
+                padding:10px;
+                visibility:hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            Enter name: <input type="text" id="val" />
+            <button onclick="chk()">Random Story</button>
+            <p id="op"></p>
+        </p>
+    </body>
+</html>
