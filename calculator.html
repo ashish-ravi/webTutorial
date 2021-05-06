@@ -17,6 +17,11 @@
                     document.getElementById("disp1").innerHTML = val;
                     document.getElementById("disp").innerHTML = displayValue;
                 }
+                else if(value == "AC"){
+                    val="";
+                    document.getElementById("disp1").innerHTML = val;
+                    document.getElementById("disp").innerHTML = val;
+                }
                 else{
                     val = val + value;
                     document.getElementById("disp").innerHTML = val;
@@ -53,6 +58,7 @@
                     <button onclick="handleClick('0')">0</button>
                     <button onclick="handleClick('=')">=</button>
                     <button onclick="handleClick('*')">*</button>
+                    <button onclick="handleClick('AC')">C</button>
                 </div>
             </div>
         </div>

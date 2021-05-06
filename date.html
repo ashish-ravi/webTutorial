@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Date</title>
+    <style>
+        button{
+            background-color: green;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            outline: none;
+        }
+        /* .btn:focus {
+            outline: none;
+            box-shadow: none;
+        } */
+        /* .btn:hover{
+            background-color: darkgreen;
+        }
+        .btn:active{
+            background-color: red;
+        } */
+        
+        p{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <div style="text-align: center;">
+        
+        
+        <b><span id="op" style="font-size: 30px; color: red; "></span></b>
+    </div>
+    
+    <div style="padding-left: 300px; padding-top: 100px;">
+        <h1 style="font-size: 50px;">Number objects</h1>
+        <p>Number is: 15.605</p>
+        
+        <button onclick="exp()" class="btn btn-primary btn-block" id="t1">To exponential</button>&nbsp;<button onclick="fxd()" class="btn btn-primary btn-block" id="t2">To fixed</button>&nbsp;<button onclick="pre()" class="btn btn-primary btn-block" id="t3">To Precision</button>&nbsp;<button onclick="lar()" class="btn btn-primary btn-block" id="t4">Largest number possible in JS</button>&nbsp;<button onclick="min()" class="btn btn-primary btn-block" id="t5">Smallest number possible in JS</button>
+        <b><p id="num"></p></b>
+    </div>
+    
+</body>
+
+
+<script type="text/javascript">
+    var time = document.getElementById('op');
+
+    function fun() {
+        time.innerHTML = new Date().toString();
+    }
+
+    setInterval(fun);
+</script>
+<script>
+    let num = 15.605;
+    var bttn1 = false;
+    var bttn2 = false;
+    var bttn3 = false;
+    var bttn4 = false;
+    var bttn5 = false;
+    let b1 = document.getElementById("t1")
+    let b2 = document.getElementById("t2")
+    let b3 = document.getElementById("t3")
+    let b4 = document.getElementById("t4")
+    let b5 = document.getElementById("t5")
+     
+    function exp(){
+        document.getElementById("num").innerHTML = num.toExponential();
+        
+        bttn1 = true;
+        bttn2 = false;
+        bttn3 = false;
+        bttn4 = false;
+        bttn5 = false;
+        
+        if(bttn1){
+             b1.style.backgroundColor = "red";
+             b2.style.backgroundColor = "green";
+             b3.style.backgroundColor = "green";
+             b4.style.backgroundColor = "green";
+             b5.style.backgroundColor = "green";
+        }
+    }
+    function fxd(){
+        document.getElementById("num").innerHTML = num.toFixed();
+        
+        bttn1 = false;
+        bttn2 = true;
+        bttn3 = false;
+        bttn4 = false;
+        bttn5 = false;
+        if(bttn2){
+            b2.style.backgroundColor = "red";
+            b1.style.backgroundColor = "green";
+            b3.style.backgroundColor = "green";
+             b4.style.backgroundColor = "green";
+             b5.style.backgroundColor = "green";
+        }
+        
+    }
+    function pre(){
+        document.getElementById("num").innerHTML = num.toPrecision(3);
+
+        bttn1 = false;
+        bttn2 = false;
+        bttn3 = true;
+        bttn4 = false;
+        bttn5 = false;
+        if(bttn3){
+            b1.style.backgroundColor = "green";
+            b2.style.backgroundColor = "green";
+            b3.style.backgroundColor = "red";
+             b4.style.backgroundColor = "green";
+             b5.style.backgroundColor = "green";
+        }
+    }
+    function lar(){
+        document.getElementById("num").innerHTML = Number.MAX_VALUE;
+
+        bttn1 = false;
+        bttn2 = false;
+        bttn3 = false;
+        bttn4 = true;
+        bttn5 = false;
+        if(bttn4){
+            b1.style.backgroundColor = "green";
+            b2.style.backgroundColor = "green";
+            b3.style.backgroundColor = "green";
+             b4.style.backgroundColor = "red";
+             b5.style.backgroundColor = "green";
+        }
+    }
+    function min(){
+        document.getElementById("num").innerHTML = Number.MIN_VALUE;
+
+        bttn1 = false;
+        bttn2 = false;
+        bttn3 = false;
+        bttn4 = false;
+        bttn5 = true;
+        if(bttn5){
+            b1.style.backgroundColor = "green";
+            b2.style.backgroundColor = "green";
+            b3.style.backgroundColor = "green";
+             b4.style.backgroundColor = "green";
+             b5.style.backgroundColor = "red";
+        }
+    }
+    
+</script>
+</html>

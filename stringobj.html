@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = "Hello there This is the sentence used for the demonstration of string functions you can test out various methods by the below options.";
+        function findLen(){
+            var stlen = str.length;
+            document.getElementById("ln").innerHTML = stlen;
+        }
+        function findTxt(){
+            var txt = document.getElementById("fintxt").value;
+            console.log(txt)
+            var pos = str.search(`${txt}`)
+            document.getElementById("tx").innerHTML = pos;
+        }
+        function slc(){
+            var num1 = document.getElementById("slc1").value;
+            var num2 = document.getElementById("slc2").value;
+            console.log(num1);
+            console.log(num2);
+            var res = str.slice(num1,num2);
+            console.log(res)
+            document.getElementById("sc").innerHTML = res;
+        }
+        function rep(){
+            var t1 = document.getElementById("rep1").value;
+            var t2 = document.getElementById("rep2").value;
+            var txt = str.replace(`${t1}`, `${t2}`);
+            document.getElementById("rp").innerHTML = txt;
+        }
+        function funUp(){
+            var upres = str.toUpperCase();
+            document.getElementById("upt").innerHTML = upres;
+        }
+        function funLow(){
+            var lowres = str.toLowerCase();
+            document.getElementById("upt").innerHTML = lowres;
+        }
+        function conct(){
+            var cttxt = document.getElementById("ct").value;
+            var txtt = str.concat(" ", cttxt); 
+            document.getElementById("crt").innerHTML = txtt;
+        }
+    </script>
+    <style>
+        body{
+            background-color:darksalmon;
+        }
+        h1{
+            text-align: center;
+            font-size: 50px;
+        }
+        div{
+            padding-left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>String objects</h1><br>
+    <div>
+        <p>Below shown is the sentence where you can try out string functions:</p>
+        <h3>Hello there This is the sentence used for the demonstration of string functions you can test out various methods by the below options.</h3>
+        <br><p>Try to find out the length by clicking this button</p>
+        <button onclick="findLen()">Find length</button>
+        <p id="ln"></p>
+        <br><br>
+        <p>Try to find out the first occurrence of a specified text in the sring</p>
+        <input type="text" id="fintxt" placeholder="Enter specific word.." />
+        <button onclick="findTxt()">Search</button>
+        <p id="tx"></p>
+        <br><br>
+        <p>Enter 2 parameters for slicing function</p>
+        <input type="number" id="slc1" placeholder="Enter 1st param.." />&nbsp;<input type="number" id="slc2" placeholder="Enter 2nd param.." />
+        <button onclick="slc()">Slice</button>
+        <p id="sc"></p>
+        <br><br>
+        <p>Try Replace function! Remember this is case sensitive. Enter 2 params </p>
+        <input type="text" id="rep1" placeholder="Enter 1st param.." />&nbsp;<input type="text" id="rep2" placeholder="Enter 2nd param.." />
+        <button onclick="rep()">Replace</button>
+        <p id="rp"></p>
+        <br><br>
+        <p>Convert everything to uppercase or lowercase</p>
+        <button onclick="funUp()">Uppercase</button>&nbsp;<button onclick="funLow()">Lowercase</button>
+        <p id="upt"></p>
+        <br><br>
+        <p>Try concatenation! Enter below string to concat</p>
+        <input type="text" id="ct" />
+        <button onclick="conct()">Concat</button>
+        <p id="crt"></p>
+    </div>
+</body>
+</html>

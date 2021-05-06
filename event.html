@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                padding-left: 30px;
+            }
+        </style>
+    </head>
+<body>
+
+<h1 style="text-align: center;">Form!</h1><br><br>
+
+<label style="font-size: 20px;">Enter your name: </label><input type="text" id="myInput" onfocus="focusFunction()" onblur="blurFunction()" style="padding: 10px; width: 30%;">
+&nbsp;<label id="dis"></label>
+
+
+
+<script>
+// Focus = Changes the background color of input to yellow
+function focusFunction() {
+    document.getElementById("myInput").style.border = "1px solid green"
+
+  document.getElementById("myInput").style.borderColor = "green";
+  document.getElementById("myInput").style.borderWidth = "2px"
+  document.getElementById("dis").innerHTML = "";
+}
+
+// No focus = Changes the background color of input to red
+function blurFunction() {
+    document.getElementById("myInput").style.borderColor = "red";
+    document.getElementById("dis").innerHTML = "Enter name!";
+}
+</script>
+
+</body>
+</html>
