@@ -1,0 +1,71 @@
+<html>
+   <head>
+      
+      <script type = "text/javascript">
+         
+            function myFunc() {
+               var a = 10;
+               var b = 10;
+               
+               try {
+                     var c = a / b;
+                     document.getElementById("fh").innerHTML = c
+                     if(b == 0){
+                         throw("Divide by zero")
+                     }
+                  }
+               
+               catch ( err ) {
+                  alert("Error: " + err );
+               }
+            }
+
+            function myFunc2(){
+                try {
+                    allert("Welcome guest!");
+                }
+                catch(err) {
+                    alert("Error: " + err );
+                }
+            }
+            function myfunc3(){
+                var a = document.getElementById("val").value
+                try{
+                    if(a>18){
+                    throw("Accepted")
+                } else{
+                    throw("Not accepted")
+                }
+                }catch(err){
+                    alert("output: " + err);
+                }
+                
+            }
+         
+      </script>
+      <style>
+          body{
+              margin-top: 28px;
+              padding-left: 30px;
+              background-color: burlywood;
+              font-size: x-large;
+          }
+      </style>
+   </head>
+   <body>
+       <h1>Try Catch!</h1>
+       <br>
+      <p>Click to see the result:</p>
+      
+      <form>
+         <input type = "button" value = "Divide by zero error" onclick = "myFunc();" /><br><br>
+         <input type = "button" value = "Reference error" onclick = "myFunc2();" /><br><br>
+         <p>Check age for voting</p>
+         <input type="text" id="val" />
+         <button onclick="myfunc3()">Check</button>
+         <p id="re"></p>
+
+      </form>
+      <p id="fh"></p>
+   </body>
+</html>

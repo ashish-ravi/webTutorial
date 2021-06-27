@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let s = new Set()
+        function namechk(){
+            let name = document.getElementById("name").value;
+            console.log(name)
+            
+            
+            if(s.has(name)){
+                document.getElementById("disp").innerHTML = "User exists! Click below to proceed"
+                prcd.style.visibility= 'visible';
+            }else{
+                s.add(name)
+                document.getElementById("disp").innerHTML = "User Added! Click below to proceed"
+                prcd.style.visibility= 'visible';
+            }
+            console.log(s.values())
+        }
+    </script>
+    <style>
+        #prcd{
+            visibility: hidden;
+        }
+        
+        input[type=text], select {
+            width: 460px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            
+            background-color: #0095D3;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #026a97;
+        }
+        #divstl{
+            border-radius: 10px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div style="padding: 40px;">
+    <h1>Hey Welcome to Shopping express!</h1>
+    <div id="divstl">
+        <p style="margin-top: 40px; font-size: larger;">Please enter your Name!</p>
+        <input type="text" id="name" ><br><br>
+        <button onclick="namechk()">Submit</button>
+        <p id="disp"></p>
+         <a href="C:\Users\asus\Desktop\College\6th SEM\WEB\assignment\web2.html"><button id="prcd">Proceed</button></a>   
+    </div>
+    </div>
+</body>
+</html>
