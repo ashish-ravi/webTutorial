@@ -22,6 +22,7 @@ console.log(arr)
 // Converting an array into a set
 let arr1 = [1,2,3,4,5]
 let arrToSet = [...new Set(arr1)]
+// let arrToSet = new Set(arr1)
 console.log(arrToSet)
 
 // Remove duplicates from an array

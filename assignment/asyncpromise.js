@@ -5,7 +5,7 @@
 
 let a = 2+3;
 let p = new Promise(function(resolve,react){
-    if(a==5){
+    if(a==6){
         resolve('Success')
     }else{
         react('Failure')
@@ -23,7 +23,7 @@ let p = new Promise(function(resolve,react){
 // })
 
 const r1 = new Promise((resolve,react) => {
-    resolve('Video 1 is recorded')
+    react('Video 1 is recorded')
 })
 
 const r2 = new Promise((resolve,react) => {
@@ -31,27 +31,27 @@ const r2 = new Promise((resolve,react) => {
 })
 
 const r3 = new Promise((resolve,react) => {
-    resolve('Video 3 is recorded')
+    react('Video 3 is recorded')
 })
 
-// Promise.all([p,r1,r2,r3]).then((msg) => {
-//     console.log(msg)
-// }).catch((smg) => {
-//     console.log(smg)
-// })
+Promise.all([p,r1,r2,r3]).then((msg) => {
+    console.log(msg)
+}).catch((smg) => {
+    console.log(smg +' under catch')
+})
 
-// Promise.allSettled([p,r1,r2,r3]).then((msg) => {
-//     console.log(msg)
-// }).catch((smg) => {
-//     console.log(smg)
-// })
+Promise.allSettled([p,r1,r2,r3]).then((msg) => {
+    console.log(msg)
+}).catch((smg) => {
+    console.log(smg+' udner catch 2')
+})
 
 
 
 // first one to execute - whether it is accepted or rejected it displays that
 
-Promise.race([p,r1,r2,r3]).then((msg) => {
-    console.log(msg)
+Promise.race([r1,r2,r3]).then((msg) => {
+    console.log(msg+' under succ')
 }).catch((smg) => {
-    console.log(smg)
+    console.log(smg+' under catch')
 })

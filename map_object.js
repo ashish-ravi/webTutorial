@@ -2,7 +2,9 @@
 let obj = {
     id: 1, name: 'Chinmayakrishna', phone: 123 
 }
+
 let arr = Object.entries(obj)
+console.log(arr)
 let map = new Map(arr)
 console.log(map)
 

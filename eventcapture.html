@@ -1,40 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<style>
+   .divstyle{
+      display:table-cell;
+      border: 2px solid black;
+      padding: 20px;
+      text-align: center;
+   }
+</style>
 </head>
-
 <body>
-
-    <div id="DIVI" class="divClass">
-    
-    DIVI
-    </div>
-    <div id="DIV2" class="divClass">
-    
-    DIV2  
-    </div>  
-    <div id="DIV3" class="divClass">
-    
-    DIV3
-    </div>
-    <script>
-    
-    var divs = document.getElementByTagName(div)
-    
-    for (var i=0;i<divs.length; i++){
-        divs[i].addEventListener("mouseover", clickHandler);
-    }
-    
-    
-    function clickHandler(){
-        alert(this.getAttribute("id")+" click event handler"); 
-    }
-    
-    
-    </script> 
-    </body> 
-    </html>
+   <div id = "div1" class="divstyle">
+   div1
+   <div id = "div2" class="divstyle">
+   div2
+   <div id = "div3" class="divstyle">
+   div3
+<script>
+   var divs = document.getElementsByTagName("div");
+   for(var i = 0; i<divs.length; i++){
+      divs[i].addEventListener("click",clickhandler,true );
+   }
+   function clickhandler() {
+      alert(this.getAttribute("id") + "event got handled");
+   }
+</script>
+</body>
+</html>

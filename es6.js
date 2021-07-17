@@ -20,9 +20,7 @@ console.log(filterList)
 
 let age = [20,30,12,11,19,18,22]
 
-const newAge = age.filter((item) =>{
-    return item>18
-})
+const newAge = age.filter((item) => item>18)
 
 console.log(newAge)
 

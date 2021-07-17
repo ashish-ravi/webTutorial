@@ -28,7 +28,7 @@
 // let myCar = new car(2011, 'model x', 'tesla');
 
 // console.log(myCar);
-
+// console.log(myCar.model)
 
 // function car(color, wheels, year, etype){
 //     this.color = color;
@@ -122,7 +122,7 @@
 //         console.log(`Name is ${this.name} age is ${this.age}`)
 //         //that = this
 //         sayAgain = () => {
-//             console.log(`Name is ${this.name} age is ${this.age}`)
+//             console.log(` insdie Name is ${this.name} age is ${this.age}`)
 //         }
         
 //     }
@@ -172,6 +172,7 @@
 // console.log(myPerson.name)
 // // myPerson.print()
 // myPerson.render()
+// console.log('print' in myPerson)
 // // console.log(myPerson.fullName)
 
 

@@ -14,7 +14,7 @@ console.log(types.get('bmw'))
 console.log(types.has('cat'))
 
 console.log(types.get('benz'))
-console.log(types.has('dog'))
+console.log(types.has('iphone'))
 // Size of a set
 console.log(types.size)
 

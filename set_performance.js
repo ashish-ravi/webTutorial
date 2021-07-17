@@ -11,6 +11,8 @@ for(var i=0; i<a.length;i++){
     console.timeEnd('Set')
 }
 
+console.log("two")
+
 // Performance analysis
 console.time('Array')
 for(i=0;i<a.length;i++){

@@ -9,14 +9,14 @@
             } );
         </script>
         <script>
-            var arr1 = ["hey", "hello"];
-            var arr2 = [];
+            // var arr1 = ["hey", "hello"];
+            // var arr2 = [];
 
             var arr3 = [];
             var arr4 = [];
-            var arr5 = [];
+            // var arr5 = [];
 
-            var arr6 = [];
+            // var arr6 = [];
 
 
 
@@ -51,10 +51,6 @@
                     console.log("contains string")
                     arr4.push(value);
                     arr4 = arr4.sort();
-                    
-
-
-
                 }
                 document.getElementById("dis").innerHTML = arr3;
                 document.getElementById("dis1").innerHTML = arr4;
@@ -66,16 +62,20 @@
                 box-sizing: border-box;
                 width:20rem;
                 border:1px solid #333;
-                background-color: gray;
+                background-color: rgb(254, 191, 52,0.75);
             }
         </style>
         <script>
             function myFun(){
-                mouseTarget.style.border = '5px solid black';
+                mouseTarget.style.border = '2px solid black';
+                mouseTarget.style.color = "#C9C9C9";
+                mouseTarget.style.backgroundColor = "#4A4A4A"
 
             }
             function myFun2(){
-                mouseTarget.style.border = '1px solid black'
+                mouseTarget.style.border = '1px solid black';
+                mouseTarget.style.color = "black";
+                mouseTarget.style.backgroundColor = "rgb(254, 191, 52,0.75)"
 
             }
            
@@ -83,14 +83,16 @@
 
     </head>
     <body>
-        <div id='mouseTarget' onmouseenter="myFun()" onmouseleave="myFun2()" class="ui-widget-content">
-            <p>Enter number to push: </p><input  id="op">
-            <button onclick="fun1()">Push</button>
-            <p>Array numer sort: </p>
-            <p id="dis"></p>
-            <p>Array string sort: </p>
-            <p id="dis1"></p>
-        </div>
+        <div style="display: flex;  justify-content: center; font-size: larger; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 600;">
+            <div id='mouseTarget' onmouseenter="myFun()" onmouseleave="myFun2()" class="ui-widget-content">
+                <p>Enter number to push: </p><input  id="op">
+                <button onclick="fun1()">Push</button>
+                <p>Array numer sort: </p>
+                <p id="dis"></p>
+                <p>Array string sort: </p>
+                <p id="dis1"></p>
+            </div></div>
+        
 
     </body>
 </html>

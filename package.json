@@ -1,0 +1,22 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "MapSet.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashish-ravi/webTutorial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashish-ravi/webTutorial/issues"
+  },
+  "homepage": "https://github.com/ashish-ravi/webTutorial#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

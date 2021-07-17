@@ -5,6 +5,7 @@ console.log(map)
 let arr = Array.from(map)
 console.log(arr)
 
+
 // Checking instance
 let m = new Map()
 console.log(m instanceof Map)
